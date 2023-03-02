@@ -10,6 +10,7 @@ import { CreatePhotoController } from "./controllers/photo/createPhotoController
 import { AddViewController } from "./controllers/photo/addViewController";
 import { AllPhotosController } from "./controllers/photo/allPhotosController";
 import path from 'path'
+import { PhotosByCategoryController } from "./controllers/photo/photosByCategoryController";
 
 const router = Router()
 
@@ -34,6 +35,8 @@ router.post('/photo', isAuthAuthenticated,upload.single('file'), new CreatePhoto
 router.put('/photo/view', new AddViewController().handle)
 
 router.get('/photos', new AllPhotosController().handle)
+
+router.get('/photos/:categoryId', new PhotosByCategoryController().handle)
 
 router.get('/photo/:nomeArquivo', (req, res) => {
   const nomeArquivo = req.params.nomeArquivo;

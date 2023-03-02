@@ -10,4 +10,8 @@ interface AddViewRequest{
   photo_id: string
 }
 
-export {CreatePhotoRequest, AddViewRequest}
+interface PhotoByCategoryRequest{
+  categoryId: string
+}
+
+export {CreatePhotoRequest, AddViewRequest,  PhotoByCategoryRequest}
