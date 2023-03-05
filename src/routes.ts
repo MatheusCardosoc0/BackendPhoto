@@ -40,7 +40,7 @@ router.get('/photos/:categoryId', new PhotosByCategoryController().handle)
 
 router.get('/photo/:nomeArquivo', (req, res) => {
   const nomeArquivo = req.params.nomeArquivo;
-  const caminhoArquivo = path.join(__dirname, '../tmp/', nomeArquivo);
+  const caminhoArquivo = path.join(__dirname, './tmp/', nomeArquivo);
   res.sendFile(caminhoArquivo);
 });
 
