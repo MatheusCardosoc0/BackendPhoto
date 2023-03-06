@@ -7,7 +7,8 @@
     "node": "18"
   },
   "scripts": {
-    "dev": "tsx watch src/server.ts"
+    "dev": "tsx watch src/server.ts",
+    "start": "node dis/server.js"
   },
   "keywords": [],
   "author": "",
